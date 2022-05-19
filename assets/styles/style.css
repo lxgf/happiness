@@ -1,0 +1,156 @@
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Regular.otf');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Sansation';
+  src: url('../fonts/Sansation-Regular.ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Sansation';
+  src: url('../fonts/Sansation-Bold.ttf');
+  font-style: normal;
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #1C150E url('../images/background.jpg') top/cover no-repeat;
+  font-family: 'Sansation', sans-serif;
+  font-size: 38px;
+  color: white;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+label {
+  cursor: pointer;
+}
+
+button {
+  border: 0;
+  background: none;
+  color: white;
+  font-family: 'Sansation', sans-serif;
+  font-size: 28px;
+  padding: 16px 34px;
+  border-radius: 20px;
+}
+
+.container {
+  max-width: 1720px;
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* header */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  font-size: 28px;
+  display: flex;
+  justify-content: center;
+}
+
+.nav__list {
+  list-style-type: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav__link-label {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+input[type='radio'] {
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  aspect-ratio: 1;
+  position: relative;
+}
+input[type='radio']::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: url('../images/radio.svg');
+  background-position-y: 0;
+}
+input[type='radio']:checked:before {
+  background-position-y: 100%;
+}
+
+.header__btn {
+  background: #00000080;
+}
+
+@media (max-width: calc(1920px - 1px)) {
+  .container {
+    max-width: 1170px;
+  }
+
+  .nav {
+    font-size: 24px;
+  }
+}
+
+
+@media (max-width: calc(1200px - 1px)) {
+  .container {
+    max-width: unset;
+    margin-left: 12vw;
+    margin-right: 12vw;
+  }
+
+  .header > *:nth-child(1) {
+    order: 1;
+  }
+  
+  .header > *:nth-child(2) {
+    order: 3;
+  }
+  
+  .header > *:nth-child(3) {
+    order: 2;
+  }
+
+  .header {
+    flex-wrap: wrap;
+    row-gap: 20px;
+  }
+
+  .header__nav {
+    width: 100%;
+  }
+
+  .nav__list {
+    width: 100%;
+    justify-content: space-evenly;
+  }
+
+  .btn {
+    font-size: ;
+  }
+}
