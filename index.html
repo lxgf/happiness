@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Клиника Happiness</title>
 
-  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link rel="stylesheet" href="src/assets/styles/style.sass">
 </head>
 <body>
   <div class="container">
     <header class="header">
       <a href="/" class="logo">
-        <img src="./assets/images/logo.svg" alt="Happiness Клиника">
+        <img src="src/assets/images/logo.svg" alt="Happiness Клиника">
       </a>
 
       <nav class="nav header__nav">
@@ -52,7 +52,14 @@
   </div>
 
   <div class="intro">
-    
+    <img src="src/assets/images/intro.svg" alt="Happiness Clinic" class="intro__img">
+
+    <div class="intro__btns-inner">
+      <button class="btn intro__btn intro__btn--contact-us">
+        Обратиться к нам
+      </button>
+      <button class="btn intro__btn intro__btn--scroll"></button>
+    </div>
   </div>
 </body>
 </html>

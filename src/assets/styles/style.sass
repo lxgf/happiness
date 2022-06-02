@@ -1,0 +1,267 @@
+@font-face
+  font-family: 'Inter'
+  src: url('../fonts/Inter-Regular.otf')
+  font-style: normal
+  font-weight: 400
+
+@font-face
+  font-family: 'Sansation'
+  src: url('../fonts/Sansation-Regular.ttf')
+  font-style: normal
+  font-weight: 400
+@font-face
+  font-family: 'Sansation'
+  src: url('../fonts/Sansation-Bold.ttf')
+  font-style: normal
+  font-weight: 700
+
+*
+  margin: 0
+  padding: 0
+  box-sizing: border-box
+
+body
+  background: #1C150E url('../images/background.jpg') (top / cover) no-repeat
+  font-family: 'Sansation', sans-serif
+  font-size: 38px
+  color: white
+
+a
+  text-decoration: none
+  color: white
+
+label
+  cursor: pointer
+
+button
+  border: 0
+  background: none
+  color: white
+  font-family: 'Sansation', sans-serif
+  cursor: pointer
+
+.btn
+  font-size: 28px
+  padding: 16px 34px
+  border-radius: 20px
+  height: fit-content
+  transition: .2s ease
+  outline: .1em solid transparent
+
+  &:hover
+    outline-color: #FFFFFFE5
+    box-shadow: 0 10px 20px #7d744e
+
+.container
+  max-width: 1720px
+  margin: 0 auto
+  display: flex
+  flex-direction: column
+
+/* header
+
+.header
+  margin-top: 50px
+  margin-bottom: 30px
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.nav
+  font-size: 28px
+  display: flex
+  justify-content: center
+
+.nav__list
+  list-style-type: none
+  display: flex
+  gap: 30px
+
+.nav__link-label
+  display: flex
+  gap: 10px
+  align-items: center
+
+input[type='radio']
+  appearance: none
+  width: 26px
+  height: 26px
+  aspect-ratio: 1
+  position: relative
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    background-size: cover
+    background-position-y: 0
+    border-radius: 13px
+    border: .2em solid white
+    transition: .3s ease
+
+  &:checked::before
+    background-position-y: 100%
+    background: white
+
+.header__btn
+  background: #00000080
+
+  &:hover
+    background: rgba(0, 0, 0, 0.74)
+
+.logo
+  img
+    height: 100%
+
+  display: flex
+
+@media (max-width: calc(1920px - 1px))
+  .container
+    max-width: 1170px
+
+  .nav
+    font-size: 24px
+
+@media (max-width: calc(1200px - 1px))
+  .container
+    max-width: unset
+    margin-left: 12vw
+    margin-right: 12vw
+
+  .header
+    > *
+      &:nth-child(1)
+        order: 1
+
+      &:nth-child(2)
+        order: 3
+
+      &:nth-child(3)
+        order: 2
+
+    flex-wrap: wrap
+    row-gap: 20px
+
+  .header__nav
+    width: 100%
+
+  .nav__list
+    width: 100%
+    justify-content: space-evenly
+
+@media (max-width: calc(768px - 1px))
+  .container
+    max-width: unset
+    margin-left: 15px
+    margin-right: 15px
+
+  .btn, .nav
+    font-size: 20px
+
+  .logo
+    height: 60px
+
+@media (max-width: calc(568px - 1px))
+  .logo
+    height: 50px
+
+  .btn, .nav
+    font-size: 16px
+
+  input[type='radio']
+    height: 20px
+    width: 20px
+
+  .nav__list
+    gap: 0
+
+@media (max-width: calc(414px - 1px))
+  .logo
+    height: 40px
+
+  .btn, .nav
+    font-size: 14px
+
+  input[type='radio']
+    height: 16px
+    width: 16px
+
+  .btn
+    padding: 13px 10px
+    border-radius: 10px
+
+  .nav__link-label
+    gap: 5px
+
+  .nav__list
+    justify-content: space-between
+
+/* intro
+
+.intro
+  display: flex
+  flex-direction: column
+  gap: 15px
+  align-items: center
+
+.intro__img
+  min-height: 500px
+  height: 64vh
+  width: 100%
+  object-fit: cover
+
+.intro__btns-inner
+  display: flex
+  gap: 36px
+
+.intro__btn--contact-us
+  background: linear-gradient(180deg, #FFCE52 0%, #D0D624 100%)
+  padding: 20px 45px
+  font-size: 36px
+  color: black
+  font-weight: 700
+
+  &:hover
+    box-shadow: 0 4px 18px #9B9F1CEF
+
+.intro__btn--scroll
+  width: 80px
+  height: 80px
+  background: #FFFFFFCC url("../images/arrow.svg") no-repeat center
+
+  &:hover
+    outline-color: black
+    filter: invert(1)
+
+@media (max-width: calc(1200px - 1px))
+  .intro__btns-inner
+    gap: 25px
+
+  .intro__btn--contact-us
+    font-size: 25px
+
+  .intro__btn--scroll
+    width: 68px
+    height: 68px
+
+@media (max-width: calc(992px - 1px))
+  .intro__btns-inner
+    gap: 22px
+
+  .intro__btn--contact-us
+    font-size: 22px
+
+  .intro__btn--scroll
+    width: 65px
+    height: 65px
+
+@media (max-width: calc(768px - 1px))
+  .intro
+    display: none
+
+@media (max-height: calc(768px - 1px))
+  .intro
+    display: none

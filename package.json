@@ -1,0 +1,22 @@
+{
+  "name": "happiness",
+  "version": "1.0.0",
+  "description": "sample site",
+  "main": "index.html",
+  "scripts": {
+    "dev": "parcel index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lxgf/happiness.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lxgf/happiness/issues"
+  },
+  "homepage": "https://github.com/lxgf/happiness#readme",
+  "dependencies": {
+    "sass": "^1.52.1"
+  }
+}
