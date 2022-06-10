@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Клиника Happiness</title>
+
+  <link rel="stylesheet" href="./assets/styles/style.sass">
+  <script src="./assets/scripts/reviews.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo.svg" alt="Happiness Клиника">
+      </a>
+
+      <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="/">
+              <input type="radio" name="nav" id="nav_about">
+              о клинике
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="/services.html">
+              <input type="radio" name="nav" id="nav_about">
+              услуги
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="/reviews.html">
+              <input type="radio" name="nav" id="nav_about" checked>
+              отзывы
+            </a>
+
+          <li class="nav__item">
+            <a class="nav__link" href="/contact-us.html">
+              <input type="radio" name="nav" id="nav_about">
+              обратиться
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="tel:+79994541658" class="btn header__btn">
+        +7 999 454 16 58
+      </a>
+    </header>
+  </div>
+
+  <main>
+    <div class="container" id="reviews">
+      <div class="reviews">
+        <div class="reviews__review review">
+          <div class="heading">
+            <p class="heading__row">
+            <span class="heading__part">
+              Кот
+            </span>
+            <span class="heading__part">
+              Данте
+            </span>
+            </p>
+          </div>
+          <div class="review__inner">
+            <img src="./assets/images/dante.jpg" alt="Автор комментария" class="review__photo">
+            <p class="review__text">
+              Отличная клиника. Доктор Виктар просто лучший!
+            </p>
+          </div>
+        </div>
+  
+        <div class="reviews__review review">
+          <div class="heading">
+            <p class="heading__row">
+            <span class="heading__part">
+              Собанекенесса
+            </span>
+            <span class="heading__part">
+              Матильда
+            </span>
+            </p>
+          </div>
+          <div class="review__inner">
+            <img src="./assets/images/a-dog.jpg" alt="Автор комментария" class="review__photo">
+            <p class="review__text">
+              Хотелось бы выразить свою благодарность Хоробрых Дмитрию Анатольевичу! Спасибо, что спас нашу собаку! Равных ему нет! Респект!
+            </p>
+          </div>
+        </div>
+  
+        <div class="reviews__review review">
+          <div class="heading">
+            <p class="heading__row">
+            <span class="heading__part">
+              Хомяк
+            </span>
+            <span class="heading__part">
+              Фома
+            </span>
+            </p>
+          </div>
+          <div class="review__inner">
+            <img src="./assets/images/hamster.jpg" alt="Автор комментария" class="review__photo">
+            <p class="review__text">
+              Ну какое же хорошее обслуживание, просто сказка.
+            </p>
+          </div>
+        </div>
+      </div>
+  
+      <div class="review-form">
+        <div class="review-form__inner">
+        <input
+          type="text"
+          name="pet-name"
+          id="pet_name_input"
+          class="review-form__input"
+          placeholder="Имя питомца"
+        >
+        <input
+          type="text"
+          name="type"
+          id="type_input"
+          class="review-form__input"
+          placeholder="Вид животного"
+        >
+        <textarea 
+          name="review" 
+          id="review_textarea" 
+          class="review-form__texarea" 
+          placeholder="Отзыв..."
+          maxlength="200"
+        ></textarea>
+        </div>
+        <button class="btn review-form__btn">
+          Опубликовать
+        </button>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

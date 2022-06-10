@@ -4,7 +4,8 @@
   "description": "sample site",
   "main": "index.html",
   "scripts": {
-    "dev": "parcel index.html"
+    "dev": "parcel src/index.html src/reviews.html src/contact-us.html src/services.html",
+    "build": "parcel build src/index.html src/reviews.html src/contact-us.html src/services.html --no-minify"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,9 @@
   "homepage": "https://github.com/lxgf/happiness#readme",
   "dependencies": {
     "sass": "^1.52.1"
+  },
+  "devDependencies": {
+    "cssnano": "^5.1.11",
+    "postcss": "^8.4.14"
   }
 }

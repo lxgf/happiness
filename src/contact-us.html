@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Клиника Happiness</title>
+
+  <link rel="stylesheet" href="./assets/styles/style.sass">
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <a href="/" class="logo">
+        <img src="./assets/images/logo.svg" alt="Happiness Клиника">
+      </a>
+
+      <nav class="nav header__nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="/">
+              <input type="radio" name="nav" id="nav_about">
+              о клинике
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="/services.html">
+              <input type="radio" name="nav" id="nav_about">
+              услуги
+            </a>
+          </li>
+
+          <li class="nav__item">
+            <a class="nav__link" href="/reviews.html">
+              <input type="radio" name="nav" id="nav_about">
+              отзывы
+            </a>
+
+          <li class="nav__item">
+            <a class="nav__link" href="/contact-us.html">
+              <input type="radio" name="nav" id="nav_about" checked>
+              обратиться
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <a href="tel:+79994541658" class="btn header__btn">
+        +7 999 454 16 58
+      </a>
+    </header>
+  </div>
+
+  <main>
+    <div class="container" id="contact-us">
+      <div class="contact-us">
+        <div class="heading">
+          <p class="heading__row">
+          <span class="heading__part">
+            Обратиться
+          </span>
+          <span class="heading__part">
+            к нам
+          </span>
+          </p>
+        </div>
+  
+        <div class="contact-us__inner">
+          <p class="contact-us__info">
+            *отправляя данные, вы соглашаетесь на их обработку компанией
+          </p>
+          <form class="contact-us__form contact-form">
+            <div class="contact-form__names-inner">
+              <input
+                type="text"
+                name="type"
+                id="type_input"
+                class="contact-form__text-input"
+                placeholder="Вид питомца"
+              >
+              <input
+                type="text"
+                name="pet-name"
+                id="pet_name_input"
+                class="contact-form__text-input"
+                placeholder="Имя питомца"
+              >
+            </div>
+            <input
+              type="text"
+              name="pet-age"
+              id="pet_age_input"
+              class="contact-form__text-input"
+              placeholder="Возраст питомца"
+            >
+            <div class="contact-form__bottom-inner">
+              <textarea
+                name="comment"
+                id="comment_input"
+                class="contact-form__text-input
+                contact-form__text-input--area"
+                placeholder="Комментарий"
+              ></textarea>
+              <button class="btn contact-form__btn">
+                Отправить заявку
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

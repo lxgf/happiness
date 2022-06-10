@@ -20,9 +20,12 @@
   padding: 0
   box-sizing: border-box
 
+html
+  scroll-behavior: smooth
+
 body
   background: #1C150E url('../images/background.jpg') (top / cover) no-repeat fixed
-  font-family: 'Sansation', sans-serif
+  font-family: 'Inter', sans-serif
   font-size: 38px
   color: white
 
@@ -37,10 +40,10 @@ button
   border: 0
   background: none
   color: white
-  font-family: 'Sansation', sans-serif
   cursor: pointer
 
 .btn
+  font-family: 'Sansation', sans-serif
   font-size: 28px
   padding: 16px 34px
   border-radius: 20px
@@ -48,7 +51,7 @@ button
   transition: .2s ease
   outline: .1em solid transparent
 
-  &:hover
+  &:hover, &:focus
     outline-color: #FFFFFFE5
     box-shadow: 0 10px 20px #7d744e
 
@@ -58,13 +61,9 @@ button
   display: flex
   flex-direction: column
 
-// header
-
-.container--fixed
-  position: sticky
-  top: 0
-
 .header
+  font-family: 'Sansation', sans-serif
+
   margin-top: 50px
   margin-bottom: 30px
   display: flex
@@ -85,7 +84,7 @@ button
   display: flex
   gap: 30px
 
-.nav__link-label
+.nav__link
   display: flex
   gap: 10px
   align-items: center
@@ -96,6 +95,7 @@ input[type='radio']
   height: 26px
   aspect-ratio: 1
   position: relative
+  cursor: pointer
 
   &::before
     content: ''
@@ -128,6 +128,7 @@ input[type='radio']
   display: flex
 
 .heading
+  font-family: 'Sansation', sans-serif
   display: flex
   gap: 36px
   flex-direction: column
@@ -157,7 +158,7 @@ input[type='radio']
     max-width: 1170px
 
   .nav
-    font-size: 24px
+    font-size: 20px
 
 @media (max-width: calc(1200px - 1px))
   body
@@ -201,13 +202,19 @@ input[type='radio']
     width: 100%
     justify-content: space-evenly
 
+  .nav
+    font-size: 18px
+
 @media (max-width: calc(768px - 1px))
   .container
     max-width: unset
     margin-left: 15px
     margin-right: 15px
 
-  .btn, .nav
+  .nav__list
+    gap: 5px
+
+  .btn
     font-size: 20px
 
   .logo
@@ -222,10 +229,19 @@ input[type='radio']
     padding: 10px 10px
     border-radius: 10px
 
-  .btn, .nav
+  .btn
     font-size: 18px
 
-  .nav__link-label
+  .nav
+    font-size: 14px
+
+  .header
+    padding: 16px
+
+  .nav__list
+    justify-content: space-between
+
+  .nav__link
     gap: 4px
 
   .logo
@@ -266,9 +282,15 @@ input[type='radio']
   .btn, .nav
     font-size: 12px
 
+  .header
+    padding: 16px 12px
+
   input[type='radio']
-    height: 16px
-    width: 16px
+    height: 10px
+    width: 10px
+
+  .nav__link
+    gap: 3px
 
   .btn
     padding: 13px 10px
@@ -506,10 +528,48 @@ input[type='radio']
   .advantage__icon-frame
     width: 60%
 
+//  services 
+
+.services
+  font-family: 'Sansation', sans-serif
+  display: flex
+  flex-direction: column
+  gap: 48px
+
+.services__grid
+  display: grid
+  grid-template-columns: 60% 40%
+  column-gap: 5%
+  padding: 35px 0 45px
+  background: #00000080
+  border-radius: 20px
+
+.services__grid-elem
+  display: flex
+  padding: 10px
+  align-items: center
+
+.services__title
+  margin-bottom: 10px
+  font-weight: 700
+
+.services__grid-elem:nth-of-type(odd)
+  justify-content: end
+  text-align: right
+
+@media (max-width: calc(414px - 1px))
+  .services__grid-elem
+    padding: 4px
+
+  .services__grid
+    padding: 25px 0 35px
+    column-gap: 2.5%
+    grid-template-columns: 50% 50%
+  
 // reviews
 
 .reviews
-  padding-bottom: 120px
+  margin-bottom: 120px
 
   display: flex
   flex-direction: column
@@ -532,23 +592,78 @@ input[type='radio']
   display: flex
   justify-content: space-between
   align-items: center
+  width: 100%
 
 .review__photo
   border-radius: 50%
+  width: 206px
+  height: 206px
+  object-fit: cover
 
 .review__text
   max-width: 60%
   padding: 30px
+  word-wrap: break-word
+  word-break: break-word
 
   background: #00000080
 
   line-height: 150%
   border-radius: 20px
 
+.review-form__texarea, .review-form__input
+  background: none
+  border: none
+  outline: none
+  font-size: 100%
+  width: 100%
+  color: white
+  font-family: 'Inter', sans-serif
+  min-height: 1.2em
+
+  &::placeholder
+    color: white
+
+  .review-form__texarea
+    min-height: 2.4em
+  
+.review-form
+  display: flex
+  width: 100%
+  gap: 20px
+  justify-content: space-between
+  align-items: center
+  background: #00000080
+  border-radius: 20px
+  padding: 45px
+  margin-bottom: 120px
+
+.review-form__inner
+  display: flex
+  flex-direction: column
+  gap: 20px
+  width: 100%
+  
+.review-form__btn
+  color: black
+  font-size: 100%
+  padding: 35px 65px
+  font-weight: 700
+  background: linear-gradient(180deg, #FFCE52 0%, #D0D624 100%)
+
 @media (max-width: calc(1200px - 1px))
   .review__photo
     width: 150px
     height: 150px
+
+@media (max-width: calc(992px - 1px))
+  .review-form
+    flex-direction: column
+
+  .review-form__btn
+    width: 100%
+    padding-left: 0
+    padding-right: 0
 
 @media (max-width: calc(568px - 1px))
   .reviews
@@ -596,6 +711,7 @@ input[type='radio']
   justify-content: space-between
 
 .contact-us__info
+  font-family: 'Sansation', sans-serif
   font-size: 24px
   font-weight: 700
   max-width: 28%
@@ -605,7 +721,7 @@ input[type='radio']
   max-width: 556px
   height: 118px
   font-size: 100%
-  font-family: inherit
+  font-family: 'Inter', sans-serif
   transition: .3s
   border: 2px solid transparent
   color: white
@@ -617,8 +733,8 @@ input[type='radio']
     border-color: white
     outline: none
 
-.contact-form__text-input::placeholder
-  color: white
+  &::placeholder
+    color: white
 
 .contact-form
   display: flex
